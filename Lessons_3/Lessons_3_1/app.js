@@ -1,6 +1,6 @@
 const firstSport = 'Football';
 const secondSport = 'Golf';
-const thirdSport = 'Basketball';
+const thirdSport = 'basketball';
 const footballTop = 'Ronaldy';
 const golfTop = 'Woods';
 const basketballTop = 'Jordan';
@@ -9,9 +9,9 @@ let userAgeMessage;
 let whatCountryUserFrom;
 let whomUserWantToBeMessage;
 //=================================//
-const userAge = prompt('Hello, user, how old are you?', '');
+const userAge = prompt('Hello. What year were you born.', '');
 if (userAge) {
-    userAgeMessage = `Your age is ${userAge}`;
+    userAgeMessage = `Your age is ${2022 - userAge}`;
 } else {
     userAgeMessage = 'I don\'t know how old are you';
     alert('Too bad you didn\'t enter this.');
@@ -49,7 +49,7 @@ if (!userTopSport) {
 } else {
     whomUserWantToBeMessage = 'Excellent! Do you want to become an athlete.';
 };
-
+//=================================//
 if (userTopSport || userTopSport == '')  {
     alert(`${userAgeMessage}\n${whatCountryUserFrom}\n${whomUserWantToBeMessage}`);
 };

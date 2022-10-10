@@ -1,0 +1,10 @@
+let number = +prompt('Enter the number');
+let lNumber = number % 10;
+let sNumber = (number - lNumber) % 100 / 10;
+let fNumber = (number - lNumber - (sNumber * 10)) / 100;
+let addNumber = (fNumber + sNumber + lNumber) % 2;
+alert(addNumber ? `The sum of numbers is odd` : ` The sum of numbers is even`);
+let nFive = (fNumber + sNumber + lNumber) % 5;
+alert(nFive ? 'Sum of this numbers is not multiple 5' : 'Sum of this numbers is multiple 5');
+let overHundred = (fNumber * sNumber * lNumber);
+alert(overHundred > 100 ? 'The multiple of this numbers more than 100' : 'The multiple of this numbers less than 100');

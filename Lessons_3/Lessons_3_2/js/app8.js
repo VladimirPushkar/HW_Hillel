@@ -1,0 +1,11 @@
+let Number = +prompt('Enter the number');
+let sixthNum = Number % 10;
+let fifthNum = (Number - sixthNum) % 100000 % 10000 % 1000 % 100 / 10;
+let forthNum = ((Number - sixthNum) - (fifthNum * 10)) % 100000 % 10000 % 1000 / 100;
+let thirdNum = ((Number - sixthNum) - (fifthNum * 10) - (forthNum * 100)) / 1000 % 100 % 10;
+let secondNum = ((Number - sixthNum) - (fifthNum * 10) - (forthNum * 100) - (thirdNum * 1000)) / 10000 % 10;
+let firstNum = ((Number - sixthNum) - (fifthNum * 10) - (forthNum * 100) - (thirdNum * 1000) - (secondNum * 10000)) / 100000;
+let OneToSix = firstNum === sixthNum;
+let TwoToFive = secondNum === fifthNum;
+let ThreeToFour = thirdNum === forthNum;
+alert((OneToSix && TwoToFive && ThreeToFour) ? 'This is a mirror number' : 'This isn\'t a mirror number');

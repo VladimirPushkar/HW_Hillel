@@ -1,7 +1,8 @@
 let eDollar = 27;
 let dFinish = '';
 for (let i = 10; i <= 100; i += 10) {
-    dFinish += eDollar * i + ', ';
+    dFinish += (i) + ' USD = ' + eDollar * i + ' UAH,<br> ';
 };
 document.write(dFinish);
+
 

@@ -31,7 +31,7 @@ let productNumber;
 let amount;
 let finalPrice = 0;
 let discountFinalPrice;
-let ask;
+let question;
 
 // Show products
 function showProducts() {
@@ -62,12 +62,15 @@ function checkDiscountNeeded() {
         sayPay();
     }
 };
+
 function sayFinalPrice() {
     console.log('The price is $' + finalPrice);
 };
+
 function sayCongrats() {
     console.log(`Congrats! You got discount ${DISCOUNT_STR}%:`);
 };
+
 function sayPay() {
     console.log('Please pay $' + discountFinalPrice);
 };
@@ -82,14 +85,14 @@ function showRequestToTheUser() {
     } while(amount <= 0 || isNaN(amount));
     showInitialPrice();
     checkDiscountNeeded();
-    askOneMoreTime();
+    qMoreTime();
 };
 
-function askOneMoreTime() {
-    ask = confirm('Would you like to bye something else?', '');
-    return ask;
+function qMoreTime() {
+    question = confirm('Would you like to bye something else?', '');
+    return question;
 };
 
 do {
     showRequestToTheUser();
-} while (ask);
+} while (question);
